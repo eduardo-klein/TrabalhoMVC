@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <h1>lista de tarefas</h1>
+    <ul>
+        <% tarefas.foreach(tarefa => {%> <li><%= tarefa.title %></li><%});
+    </ul>
+    <form action="/tarefas" method="post">
+        <input type="text" name="title" placeholder="Nova tarefa">
+        <button type="submit">Adicionar</button>
+
+    </form>
+</body>
+</html>
