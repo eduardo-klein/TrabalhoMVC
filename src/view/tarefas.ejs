@@ -7,9 +7,12 @@
 <body>
     <h1>lista de tarefas</h1>
     <ul>
-        <% tarefas.foreach(tarefa => {%> <li><%= tarefa.title %></li><%});
+        <% 
+            tarefas.forEach(tarefa => 
+            {%> <li><%= tarefa.title %></li><%});
+        %>
     </ul>
-    <form action="/tarefas" method="post">
+    <form action="/tarefas" method="POST">
         <input type="text" name="title" placeholder="Nova tarefa">
         <button type="submit">Adicionar</button>
 

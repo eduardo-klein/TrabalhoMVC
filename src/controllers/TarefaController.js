@@ -1,12 +1,12 @@
 const TarefaModel = require('../models/TarefaModel');
 
-const tarefas=[];
+const tarefas= TarefaModel.listarTarefas();
 
-function getTarefas (req,res){
+async function  getTarefas (req,res){
     res.render('tarefas', {tarefas});
 }
 
-function addTarefa(req,res){
+async function addTarefa(req,res){
     const title = req.body;
     const tarefa = new Tarefa(Date.now(), title, false)
     tarefas.push(tarefa)
